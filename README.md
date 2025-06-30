@@ -3,10 +3,10 @@
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 To run the app::
-install the packages::npm install 
+install the packages :: "npm install" 
 to run 
-frontend::npm run dev
-backend::npm run dev 
+frontend :: "npm run dev"
+backend :: "npm run dev" 
 
 Currently, two official plugins are available:
 
