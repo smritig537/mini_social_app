@@ -1,0 +1,83 @@
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.app-column {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.error-boundary {
+  text-align: center;
+  padding: 20px;
+  color: #d32f2f;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.error-boundary h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.error-boundary p {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 12px;
+  }
+
+  .app-column {
+    max-width: 100%;
+    gap: 12px;
+  }
+
+  .error-boundary {
+    padding: 12px;
+  }
+
+  .error-boundary h1 {
+    font-size: 1.4rem;
+  }
+
+  .error-boundary p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    padding: 8px;
+  }
+
+  .app-column {
+    gap: 10px;
+  }
+
+  .error-boundary {
+    padding: 10px;
+  }
+
+  .error-boundary h1 {
+    font-size: 1.3rem;
+  }
+
+  .error-boundary p {
+    font-size: 0.8rem;
+  }
+}

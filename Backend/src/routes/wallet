@@ -1,0 +1,45 @@
+const express = require('express');
+const router = express.Router();
+const { rechargeWallet, getWallet, getTransactions } = require('../data/store');
+
+router.post('/recharge', (req, res) => {
+  const { userId, amount } = req.body;
+
+  if (!userId || !amount || amount <= 0) {
+    return res.status(400).json({ error: 'Invalid userId or amount' });
+  }
+
+  try {
+    const newBalance = rechargeWallet(userId, amount);
+    res.json({ newBalance });
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to recharge wallet' });
+  }
+});
+
+router.get('/:userId', (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const wallet = getWallet(userId);
+    if (!wallet) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    res.json(wallet);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch wallet' });
+  }
+});
+
+router.get('/:userId/transactions', (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const transactions = getTransactions(userId);
+    res.json(transactions);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch transactions' });
+  }
+});
+
+module.exports = router;

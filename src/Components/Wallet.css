@@ -1,0 +1,104 @@
+.wallet {
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.wallet h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.wallet p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.recharge-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.recharge-options button {
+  padding: 10px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex: 1;
+  min-width: 120px;
+}
+
+.recharge-options button:hover {
+  background: #1b5e20;
+  transform: scale(1.02);
+}
+
+.recharge-options button:focus {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+
+.recharge-options button:active {
+  transform: scale(0.98);
+}
+
+.wallet h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin: 15px 0 10px;
+  font-weight: 500;
+}
+
+.wallet ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wallet li {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 1rem;
+  color: #333;
+  background: #f5f5f5;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 400px) {
+  .wallet {
+    padding: 12px;
+  }
+
+  .wallet h2 {
+    font-size: 1.5rem;
+  }
+
+  .recharge-options {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .recharge-options button {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .wallet li {
+    font-size: 0.9rem;
+  }
+}
